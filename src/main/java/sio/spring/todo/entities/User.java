@@ -3,13 +3,14 @@ package sio.spring.todo.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User extends BaseObject {
 
 	private String login;
 	private String password;
 	private List<TodoList> todoLists;
 
 	public User() {
+		super();
 		this.todoLists = new ArrayList<TodoList>();
 	}
 
