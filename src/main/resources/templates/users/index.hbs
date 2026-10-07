@@ -1,4 +1,25 @@
 {{> /include/header }}
 <h1>Utilisateurs</h1>
 <a href="/users/add" class="btn btn-dark">Ajouter un utilisateur</a>
+
+{{#message}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{.}}
+</div>
+{{/message}}
+
+
+<ul class="list-group">
+{{#users}}
+	<li class="list-group-item">
+		{{login}} - {{id}}
+	</li>
+{{/users}}
+</ul>
+
+{{^users}}
+<div class="alert alert-warning" role="alert">
+    Aucun utilisateur présent.
+</div>
+{{/users}}
 {{> /include/footer }}
