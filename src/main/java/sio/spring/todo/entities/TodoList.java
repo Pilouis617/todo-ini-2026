@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TodoList {
+public class TodoList extends BaseObject {
 	private String name;
 	private LocalDateTime createdAt;
 	private User owner;
@@ -15,6 +15,7 @@ public class TodoList {
 	}
 
 	public TodoList(String name) {
+		super();
 		this.name = name;
 		this.createdAt = LocalDateTime.now();
 		this.items = new ArrayList<TodoItem>();

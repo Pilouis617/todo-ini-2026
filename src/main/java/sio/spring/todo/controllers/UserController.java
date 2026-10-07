@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import sio.spring.todo.entities.User;
 import sio.spring.todo.repositories.UserMemoryRepository;
@@ -23,5 +24,10 @@ public class UserController {
 		List<User> users = userRepository.findAll();
 		model.addAttribute("users", users);
 		return "/users/index";
+	}
+
+	@GetMapping("/add")
+	public ModelAndView add() {
+		return new ModelAndView("/users/form", "user", new User());
 	}
 }

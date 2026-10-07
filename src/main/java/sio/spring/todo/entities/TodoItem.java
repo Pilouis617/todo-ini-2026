@@ -1,6 +1,6 @@
 package sio.spring.todo.entities;
 
-public class TodoItem {
+public class TodoItem extends BaseObject {
 	private String label;
 	private boolean checked;
 
@@ -9,6 +9,7 @@ public class TodoItem {
 	}
 
 	public TodoItem(String label) {
+		super();
 		this.label = label;
 		this.checked = false;
 	}
