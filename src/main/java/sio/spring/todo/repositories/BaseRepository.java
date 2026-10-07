@@ -9,7 +9,7 @@ import java.util.Optional;
 import sio.spring.todo.entities.BaseObject;
 
 @org.springframework.stereotype.Repository
-public class BaseRepository<T extends BaseObject, ID> implements Repository<T, ID> {
+public class BaseRepository<T extends BaseObject, ID> implements RepositoryInterface<T, ID> {
 	private Map<ID, T> internalUsers = new HashMap<ID, T>();
 
 	@Override

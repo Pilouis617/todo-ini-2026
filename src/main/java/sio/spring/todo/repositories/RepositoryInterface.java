@@ -3,7 +3,7 @@ package sio.spring.todo.repositories;
 import java.util.List;
 import java.util.Optional;
 
-public interface Repository<T, ID> {
+public interface RepositoryInterface<T, ID> {
 
 	T save(T entity);
 
